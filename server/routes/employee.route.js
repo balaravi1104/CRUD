@@ -8,6 +8,10 @@ const ctrl = require('../controller/employee.controller')
 
 // Add Employee
     empRoute.post('/create',ctrl.create)
+    empRoute.get('/readall',ctrl.getAll)
+    empRoute.get('/read/:id',ctrl.getBYId)
+    empRoute.put('/update/:id',ctrl.update)
+    empRoute.delete('/delete/:id',ctrl.delete)
 // employeeRoute.route('/create').post((req, res, next) => {
 //   Employee.create(req.body, (error, data) => {
 //     if (error) {
