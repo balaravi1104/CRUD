@@ -34,6 +34,9 @@ export class EmpCreateComponent implements OnInit {
       onlySelf: true
     });
   }
+  get myForm(){
+    return this.employeeForm.controls;
+  }
   onSubmit() {
     this.submitted = true;
     if (!this.employeeForm.valid) {
