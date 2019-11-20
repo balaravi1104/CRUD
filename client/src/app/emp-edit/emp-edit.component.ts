@@ -26,7 +26,7 @@ export class EmpEditComponent implements OnInit {
     let id = this.actRoute.snapshot.paramMap.get('id');
     this.getEmployee(id);
     this.editForm = this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required,Validators.pattern('^[a-z]+$')]],
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$')]],
       designation: ['', [Validators.required]],
       phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
