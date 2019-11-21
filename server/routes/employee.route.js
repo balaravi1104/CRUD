@@ -12,6 +12,7 @@ const ctrl = require('../controller/employee.controller')
     empRoute.get('/read/:id',ctrl.getBYId)
     empRoute.put('/update/:id',ctrl.update)
     empRoute.delete('/delete/:id',ctrl.delete)
+    empRoute.get('/readname',ctrl.getAllNames);
 // employeeRoute.route('/create').post((req, res, next) => {
 //   Employee.create(req.body, (error, data) => {
 //     if (error) {

@@ -27,4 +27,7 @@ export class EmployeeService {
   deleteEmp(id) {
     return this.http.delete(environment.apiBaseUrl + `/delete/${id}`, { headers: this.headers });
   }
+  getEmpname() {
+    return this.http.get(environment.apiBaseUrl + `/readName`);
+  }
 }

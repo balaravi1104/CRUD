@@ -10,20 +10,26 @@ import { EmpCreateComponent } from './emp-create/emp-create.component'
 import {EmployeeService} from './employee.service'
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpListComponent,
     EmpEditComponent,
-    EmpCreateComponent
+    EmpCreateComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

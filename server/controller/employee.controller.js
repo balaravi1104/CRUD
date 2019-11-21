@@ -23,6 +23,15 @@ module.exports.getAll = (req, res) => {
       }
     })
   }
+  module.exports.getAllNames = (req, res) => {
+    emp.find({},{name:1,_id:0},(error, data) => {
+      if (error) {
+        return next(error)
+      } else {
+        res.json(data)
+      }
+    })
+  }
   module.exports.getBYId = (req, res) => {
     emp.findById(req.params.id, (error, data) => {
       if (error) {
